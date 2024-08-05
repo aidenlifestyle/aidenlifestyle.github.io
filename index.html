@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Video with Overlay</title>
+    <title>AIDEN</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Oswald', sans-serif;
         }
 
         .background-video {
@@ -33,43 +33,79 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #333; /* Dark gray for better readability */
             text-align: center;
-            background: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+            padding: 20px;
         }
 
-         .company-name {
-            font-family: 'Oswald', sans-serif; /* Apply Oswald font */
-            font-size: 8em;
-            margin-bottom: 20px;
+        .company-name {
+            font-family: 'Amiri', sans-serif;
+            font-size: 6em; /* Adjusted for better balance */
+            margin-bottom: 10px;
             font-weight: bold;
+            color: #222; /* Darker color for contrast */
         }
 
         .coming-soon {
-            font-size: 4em;
+            font-size: 2.5em; /* Adjusted for better balance */
             margin: 0;
+            color: #555; /* Medium gray for contrast */
         }
 
-         .instagram-follow {
-            display: inline-block;
-            background: #e4405f; /* Instagram's pink color */
+        .instagram-follow {
+            display: inline-flex;
+            align-items: center;
+            background: #e4405f;
             color: white;
-            font-size: 1em;
-            padding: 10px 20px;
+            font-size: 1.2em;
+            padding: 10px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
         }
 
         .instagram-follow:hover {
-            background-color: #c13584; /* Darker pink on hover */
+            background-color: #c13584;
+            transform: scale(1.05); /* Slight zoom effect on hover */
         }
 
         .instagram-icon {
-            width: 20px;
-            vertical-align: middle;
+            width: 24px;
+            height: 24px;
             margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 4em; /* Adjust font size for smaller screens */
+            }
+
+            .coming-soon {
+                font-size: 1.5em; /* Adjust font size for smaller screens */
+            }
+
+            .instagram-follow {
+                font-size: 1em; /* Adjust font size for smaller screens */
+                padding: 8px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .company-name {
+                font-size: 3em; /* Further adjustment for very small screens */
+            }
+
+            .coming-soon {
+                font-size: 1.2em; /* Further adjustment for very small screens */
+            }
+
+            .instagram-follow {
+                font-size: 0.9em; /* Further adjustment for very small screens */
+                padding: 6px 15px;
+            }
         }
     </style>
 </head>
@@ -80,11 +116,9 @@
 </video>
 <div class="overlay">
     <div class="company-name">A I D E N</div>
-    <div class="coming-soon">Godly drip arriving soon</div>
-    <br/>
-    <br/>
-    <a href="https://www.instagram.com/aidenlifestyle.in" class="instagram-follow" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
+    <div class="coming-soon">Godly drip dropping soon..</div>
+    <a href="https://www.instagram.com/aidenlifestyle.in" class="instagram-follow" target="_blank" aria-label="Follow us on Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon" class="instagram-icon">
         Follow us on Instagram
     </a>
 </div>
